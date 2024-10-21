@@ -40,10 +40,12 @@ for i in range(n, 0, -1):
     if i % 2 == 0:
         print(i, end=' ')
 
-n = int(input("Введіть число: "))
-factorial = 1
+factorial_number = int(input("Введіть число: "))
 
-for i in range(1, n + 1):
-    factorial *= i
+def factorial(number):
+    if number < 2:
+        return 1
+    else:
+        return number * factorial(n-1)
 
-print(f"Факторіал {n} = {factorial}")
+print(f"Факторіал {n} = {factorial(factorial_number)}")
